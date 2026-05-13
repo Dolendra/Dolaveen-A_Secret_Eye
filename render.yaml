@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: app.py # Replace with your actual app name
+    env: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    buildFilter:
+      paths:
+        - Dockerfile
+        - requirements.txt
